@@ -1,32 +1,32 @@
-# Verity � Architecture Overview
+# Verity — Visão Geral da Arquitetura
 
-## 1. System Overview
+## 1. Visão Geral do Sistema
 
-The Verity platform is designed to automate credit approval for small and medium enterprises (SMEs) using a hybrid architecture combining classical machine learning and generative AI.
+A plataforma **Verity** foi projetada para automatizar a concessão de crédito para **Pequenas e Médias Empresas (PMEs)** utilizando uma arquitetura híbrida que combina **Machine Learning tradicional** e **Inteligência Artificial Generativa**.
 
-The system processes approximately:
+O sistema processa aproximadamente:
 
-- **10,000 credit applications per day**
-- Structured financial data
-- Unstructured documents such as emails, contracts, and market news
+- **10.000 solicitações de crédito por dia**
+- Dados financeiros estruturados
+- Documentos não estruturados como e-mails, contratos e notícias de mercado
 
-The goal is to provide **automated credit decisions with explainable justifications** while minimizing financial and operational risk.
+O objetivo da solução é fornecer **decisões automáticas de crédito com justificativas explicáveis**, minimizando riscos financeiros e operacionais.
 
 ---
 
-# 2. Architectural Principles
+# 2. Princípios Arquiteturais
 
-The architecture was designed based on the following principles:
+A arquitetura foi projetada com base nos seguintes princípios:
 
-- Hybrid AI Architecture
-- Cost efficiency (FinOps)
-- Explainability and auditability
-- Security by design
-- Scalable cloud-native infrastructure
+- Arquitetura híbrida de IA
+- Eficiência de custos (FinOps)
+- Explicabilidade e auditabilidade
+- Segurança desde a concepção (*Security by Design*)
+- Infraestrutura escalável nativa em nuvem
 
-The platform is built using services from **Google Cloud Platform**.
+A solução utiliza serviços da **Google Cloud Platform (GCP)**.
 
-Key services include:
+Principais serviços utilizados:
 
 - BigQuery
 - Vertex AI
@@ -37,164 +37,173 @@ Key services include:
 
 ---
 
-# 3. High-Level Architecture
+# 3. Arquitetura de Alto Nível
 
-The solution is divided into four main layers:
-
-## Data Layer
-
-Responsible for storing structured financial data.
-
-Primary components:
-
-- BigQuery
-- Feature Store
-
-Stored data includes:
-
-- transaction history
-- financial statements
-- customer registration data
+A solução é dividida em quatro camadas principais.
 
 ---
 
-## Document Processing Layer
+## Camada de Dados
 
-Handles ingestion and processing of unstructured data.
+Responsável pelo armazenamento e gerenciamento dos dados estruturados financeiros.
 
-Main components:
+Componentes principais:
 
-- Document AI for OCR processing
-- Data Loss Prevention (DLP) for PII detection
-- Embedding generation via Vertex AI
+- **BigQuery**
+- **Feature Store**
 
-Processed data is stored in a vector database for semantic search.
+Os dados armazenados incluem:
+
+- histórico transacional
+- balanços financeiros
+- dados cadastrais de clientes
+
+Esses dados são utilizados para alimentar os modelos de risco.
 
 ---
 
-## Risk Decision Engine
+## Camada de Processamento de Documentos
 
-The risk scoring engine is based on classical machine learning models.
+Responsável pela ingestão e processamento de dados não estruturados.
 
-Primary model:
+Principais componentes:
+
+- **Document AI** para extração de texto via OCR
+- **Cloud Data Loss Prevention (DLP)** para detecção de dados sensíveis
+- **Vertex AI** para geração de embeddings
+
+Os documentos processados são armazenados em um banco vetorial para permitir **busca semântica**.
+
+---
+
+## Motor de Decisão de Risco
+
+O cálculo do score de risco é realizado utilizando **modelos tradicionais de Machine Learning**.
+
+Modelo principal utilizado:
 
 - **XGBoost**
 
-The model calculates a credit risk score based on structured financial features retrieved from the Feature Store.
+O modelo calcula o score de risco com base em features estruturadas recuperadas da **Feature Store**.
 
-Advantages:
+Vantagens dessa abordagem:
 
-- Deterministic results
-- High performance for tabular financial data
-- Lower computational cost
-
----
-
-## Context and Justification Engine
-
-Generative AI models are used to interpret contextual information and produce explainable decisions.
-
-The system uses a **Retrieval-Augmented Generation (RAG)** architecture.
-
-Workflow:
-
-1. Retrieve structured features from the Feature Store
-2. Retrieve relevant documents from the vector database
-3. Construct a grounded prompt
-4. Generate explanation using Gemini
-
-This ensures that generated explanations are **fact-based and auditable**.
+- resultados determinísticos
+- alto desempenho em dados tabulares
+- menor custo computacional
+- maior interpretabilidade
 
 ---
 
-# 4. Agent-to-Agent Orchestration
+## Motor de Contexto e Justificativa
 
-The platform uses an agent-based architecture with two main agents:
+Modelos de **IA generativa** são utilizados para interpretar informações contextuais e produzir justificativas explicáveis para as decisões de crédito.
 
-### Risk Agent
+A solução utiliza uma arquitetura baseada em **RAG (Retrieval-Augmented Generation)**.
 
-Responsible for numerical risk scoring.
+Fluxo de funcionamento:
 
-Functions:
+1. Recuperação de features estruturadas da **Feature Store**
+2. Recuperação de documentos relevantes via **banco vetorial**
+3. Construção de um prompt com evidências
+4. Geração da justificativa usando **Gemini**
 
-- feature retrieval
-- credit scoring
-- decision threshold evaluation
-
-### Context Agent
-
-Responsible for textual interpretation.
-
-Functions:
-
-- semantic document retrieval
-- contextual analysis
-- explanation generation
-
-Both agents collaborate to produce the final decision.
+Essa abordagem garante que as justificativas sejam **baseadas em evidências reais e auditáveis**.
 
 ---
 
-# 5. Security and Privacy
+# 4. Orquestração Agent-to-Agent (A2A)
 
-The system processes sensitive financial and personal information.
+A plataforma utiliza uma arquitetura baseada em **agentes especializados**.
 
-Security measures include:
+### Agente de Risco
 
-- PII detection using Cloud DLP
-- tokenization and redaction of sensitive data
-- strict IAM access control
-- VPC Service Controls to isolate services
+Responsável pela análise quantitativa.
 
-These mechanisms ensure compliance with **LGPD and financial regulations**.
+Funções:
 
----
-
-# 6. FinOps Strategy
-
-To control operational costs, the system uses a tiered AI inference strategy.
-
-Request distribution:
-
-- 70% handled by XGBoost
-- 20% handled by Gemini Flash
-- 10% handled by Gemini Pro
-
-This architecture significantly reduces the cost of generative AI usage while maintaining high decision accuracy.
+- recuperação de features
+- cálculo do score de crédito
+- avaliação de thresholds de risco
 
 ---
 
-# 7. Governance and Observability
+### Agente de Contexto
 
-To ensure traceability and auditability:
+Responsável pela análise textual e contextual.
 
-- all decisions are logged
-- prompts and model outputs are recorded
-- feature values used in decisions are stored
+Funções:
 
-Logs are centralized in **BigQuery** for auditing and monitoring.
-
----
-
-# 8. Scalability
-
-The platform is designed to scale horizontally using managed services:
-
-- serverless inference services
-- scalable vector search
-- distributed data processing
-
-This architecture supports future growth in credit applications without major structural changes.
+- recuperação semântica de documentos
+- análise de contexto
+- geração de justificativa
 
 ---
 
-# 9. Conclusion
+Ambos os agentes colaboram para produzir a **decisão final de crédito**.
 
-The Verity architecture balances performance, explainability, cost efficiency, and security.
+---
 
-By combining classical machine learning with generative AI, the system achieves:
+# 5. Segurança e Privacidade
 
-- scalable credit decision automation
-- grounded AI explanations
-- strong data governance
-- efficient operational cost management
+O sistema processa informações financeiras e dados pessoais sensíveis.
+
+Medidas de segurança implementadas:
+
+- detecção de PII utilizando **Cloud DLP**
+- mascaramento e tokenização de dados sensíveis
+- controle de acesso via **IAM**
+- isolamento de serviços via **VPC Service Controls**
+
+Esses mecanismos garantem conformidade com **LGPD e regulamentações financeiras**.
+
+---
+
+# 6. Estratégia FinOps
+
+Para controlar os custos operacionais de IA, o sistema utiliza uma estratégia de **inferência em camadas**.
+
+Distribuição estimada das requisições:
+
+- **70%** resolvidas pelo modelo XGBoost
+- **20%** analisadas pelo modelo **Gemini Flash**
+- **10%** enviadas para **Gemini Pro**
+
+Essa abordagem reduz significativamente os custos associados ao uso de modelos generativos.
+
+---
+
+# 7. Governança e Observabilidade
+
+Para garantir rastreabilidade e auditabilidade:
+
+- todas as decisões são registradas
+- prompts e respostas do modelo são armazenados
+- features utilizadas na decisão são registradas
+
+Os logs são centralizados no **BigQuery** para auditoria e monitoramento.
+
+---
+
+# 8. Escalabilidade
+
+A plataforma foi projetada para escalar horizontalmente utilizando serviços gerenciados da GCP:
+
+- inferência serverless
+- banco vetorial escalável
+- processamento distribuído de dados
+
+Essa arquitetura permite suportar crescimento no volume de solicitações sem grandes alterações estruturais.
+
+---
+
+# 9. Conclusão
+
+A arquitetura da plataforma **Verity** equilibra desempenho, explicabilidade, eficiência de custos e segurança.
+
+Ao combinar **Machine Learning tradicional com IA generativa**, a solução permite:
+
+- automação escalável de decisões de crédito
+- geração de justificativas baseadas em evidências
+- governança robusta de dados
+- controle eficiente de custos operacionais
