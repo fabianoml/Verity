@@ -1,48 +1,303 @@
-# Verity
-Desafio Verity
+# 🧠 Desafio Verity  
+## Analista de Crédito Híbrido (Hybrid Credit Analyst)
 
-Desafio Técnico: O "Analista de Crédito Híbrido" 
-Contexto do Cenário 
-Uma instituição financeira digital (GCP First) está automatizando a concessão de crédito para 
-PMEs. O processo envolve: 
-Dados Estruturados: Histórico transacional, balanços e dados cadastrais no BigQuery. 
-Dados Não Estruturados: Trocas de e-mails, contratos sociais em PDF e notícias de 
-mercado. Volume: 10.000 pedidos/dia.  
-Meta: Decisão automática com justificativa, minimizando o risco financeiro e 
-operacional. 
-O Desafio Arquitetural 
-Parte 1: Arquitetura Híbrida e Qualidade de Dados (Data Quality)  
-Desenhe a solução técnica ponta a ponta na GCP, detalhando: 
-● Pipeline de Ingestão e Qualidade: Antes de os dados chegarem ao modelo ou à 
-Feature Store, como você garante a qualidade? Defina onde entram validação de 
-schema, detecção de data drift e data contracts. O que acontece se o dado transacional 
-estiver corrompido? 
-● O Motor de Risco (ML Clássico): Arquitetura para o cálculo do score numérico. 
-Justifique o uso de modelos determinísticos (XGBoost/Scikit-learn) versus LLMs para 
-esta etapa. 
+Este desafio propõe o desenho de uma **arquitetura de dados e IA na Google Cloud Platform (GCP)** para automatizar a concessão de crédito para **PMEs**, combinando **Machine Learning clássico** e **GenAI**.
 
-● O Agente de Contexto (GenAI): Arquitetura para extração de dados não estruturados. 
-Parte 2: Segurança e Privacidade (Security by Design)  
-Os e-mails e contratos contêm dados sensíveis (PII - Nomes, CPFs, Endereços, Sigilo 
-Bancário). 
-● Proteção de PII: Como você garante que dados sensíveis não sejam expostos 
-indevidamente ao modelo de GenAI ou vazados nos logs? 
-● Descreva a estratégia de ofuscação/redação (ex: DLP) e controles de acesso (IAM/VPC 
-Service Controls) que você implementaria para garantir compliance. 
-Parte 3: Orquestração A2A (Agent-to-Agent)  
-Projete o fluxo de interação entre os componentes. 
-● Desenhe um diagrama de sequência mostrando como o Agente de Risco (Numérico) e 
-o Agente de Contexto (Textual) colaboram. 
-● Como o sistema lida com falhas? (Ex: O serviço de OCR do PDF falhou, o modelo de 
-risco deve negar o crédito ou pedir revisão humana?). Defina o protocolo de fallback. 
-Parte 4: FinOps & Engenharia de Custos  
-Você tem um orçamento restrito. 
-● Trade-off: Demonstre matematicamente (estimativa) a diferença de custo mensal entre 
-processar todas as 10.000 requisições/dia via Gemini 1.5 Pro versus uma abordagem 
-híbrida (XGBoost para triagem inicial + Gemini Flash/Pro apenas para casos cinzentos). 
-● Justifique a viabilidade econômica da sua escolha. 
-Parte 5: Governança e Grounding 
-● Prevenção de Alucinação: Explique como utilizará técnicas de RAG 
-(Retrieval-Augmented Generation) conectadas à Feature Store para garantir que a 
-justificativa da recusa seja baseada em fatos reais (ex: "Negado por dívida ativa em X") 
-e não em invenções do modelo.
+---
+
+# 🎯 Contexto do Cenário
+
+Uma instituição financeira digital **GCP First** está automatizando seu processo de concessão de crédito.
+
+O sistema deve analisar tanto **dados estruturados quanto não estruturados** para tomar decisões automáticas.
+
+### 📊 Dados Estruturados
+Armazenados no **BigQuery**
+
+- Histórico transacional
+- Balanços financeiros
+- Dados cadastrais das empresas
+
+### 📄 Dados Não Estruturados
+
+- Trocas de **e-mails**
+- **Contratos sociais em PDF**
+- **Notícias de mercado**
+
+### 📦 Volume de processamento
+
+
+### 🎯 Objetivo
+
+Construir um sistema capaz de:
+
+- Automatizar decisões de crédito
+- Gerar **justificativas explicáveis**
+- Minimizar **risco financeiro e operacional**
+- Garantir **compliance e governança de dados**
+
+---
+
+# 🏗️ O Desafio Arquitetural
+
+A solução deve ser projetada **end-to-end na Google Cloud Platform**.
+
+---
+
+# 📦 Parte 1 — Arquitetura Híbrida e Qualidade de Dados
+
+Desenhar a solução técnica completa contemplando ingestão, processamento e inferência.
+
+## 🔄 Pipeline de Ingestão e Qualidade de Dados
+
+Antes que os dados cheguem ao modelo ou à **Feature Store**, é necessário garantir qualidade.
+
+Definir:
+
+- Validação de **schema**
+- **Data contracts**
+- Detecção de **data drift**
+- Regras de qualidade
+
+### ❓ Pergunta crítica
+
+O que acontece se um **dado transacional estiver corrompido**?
+
+A arquitetura deve prever:
+
+- isolamento do dado
+- alertas
+- fallback seguro
+
+---
+
+## ⚙️ O Motor de Risco (ML Clássico)
+
+Projetar a arquitetura para o cálculo do **score de risco numérico**.
+
+Justificar o uso de modelos determinísticos como:
+
+- **XGBoost**
+- **Scikit-learn**
+
+em vez de LLMs para essa etapa.
+
+Critérios esperados:
+
+- explicabilidade
+- estabilidade
+- eficiência computacional
+- auditabilidade
+
+---
+
+## 🤖 O Agente de Contexto (GenAI)
+
+Arquitetura responsável por extrair conhecimento de dados não estruturados.
+
+Exemplos:
+
+- análise de contratos
+- análise de e-mails
+- análise de notícias de mercado
+
+O objetivo é gerar **sinais contextuais que complementam o modelo de risco**.
+
+---
+
+# 🔐 Parte 2 — Segurança e Privacidade (Security by Design)
+
+Os documentos analisados podem conter **dados sensíveis (PII)**.
+
+### Exemplos de PII
+
+- Nomes
+- CPF
+- Endereços
+- Dados bancários
+- Informações financeiras
+
+---
+
+## 🛡️ Proteção de PII
+
+Definir como garantir que dados sensíveis:
+
+- não sejam expostos indevidamente
+- não sejam enviados diretamente ao modelo GenAI
+- não vazem em logs
+
+---
+
+## 🔎 Estratégias esperadas
+
+Implementar:
+
+### 🔒 Ofuscação e Redação de Dados
+
+Exemplo de ferramentas:
+
+- **DLP (Data Loss Prevention)**
+
+Técnicas:
+
+- Masking
+- Tokenização
+- Redação automática
+
+---
+
+### 🧩 Controles de acesso
+
+Definir políticas usando:
+
+- **IAM**
+- **VPC Service Controls**
+
+Objetivos:
+
+- isolamento de dados
+- proteção contra exfiltração
+- compliance regulatório
+
+---
+
+# 🤝 Parte 3 — Orquestração A2A (Agent-to-Agent)
+
+Projetar como os agentes interagem entre si.
+
+---
+
+## 🔄 Interação entre Agentes
+
+Criar um fluxo onde:
+
+- **Agente de Risco (Numérico)** calcula o score
+- **Agente de Contexto (Textual)** analisa documentos
+
+Ambos colaboram para produzir a decisão final.
+
+---
+
+## 📈 Diagrama de Sequência
+
+O diagrama deve mostrar:
+
+1️⃣ Solicitação de crédito  
+2️⃣ Análise do modelo de risco  
+3️⃣ Extração de contexto textual  
+4️⃣ Consolidação da decisão  
+5️⃣ Geração da justificativa
+
+---
+
+## 🚨 Tratamento de Falhas
+
+Exemplo: Falha no OCR do contrato PDF
+
+
+O sistema deve decidir entre:
+
+- negar automaticamente
+- solicitar revisão humana
+- reprocessar o documento
+
+Definir claramente o **protocolo de fallback**.
+
+---
+
+# 💰 Parte 4 — FinOps e Engenharia de Custos
+
+Existe **restrição orçamentária**.
+
+A arquitetura precisa ser economicamente viável.
+
+---
+
+## ⚖️ Trade-off de Custos
+
+Demonstrar matematicamente a diferença de custo entre:
+
+### Abordagem 1 — GenAI puro
+100% das requisições processadas via Gemini 1.5 Pro
+
+
+### Abordagem 2 — Arquitetura híbrida
+- Triagem inicial com **XGBoost**
+- Apenas casos **cinzentos** enviados ao LLM
+
+Fluxo esperado:
+XGBoost → triagem inicial
+↓
+Casos simples → decisão automática
+↓
+Casos cinzentos → Gemini Flash / Gemini Pro
+
+
+Calcular:
+
+- custo diário
+- custo mensal
+- economia obtida
+
+---
+
+# 🧠 Parte 5 — Governança e Grounding
+
+Um sistema de crédito **não pode gerar justificativas inventadas**.
+
+---
+
+## 🚫 Prevenção de Alucinação
+
+Explicar como implementar **RAG (Retrieval-Augmented Generation)**.
+
+O modelo deve gerar respostas **baseadas em evidências reais**.
+
+---
+
+## 🔎 Grounding baseado em dados
+
+A justificativa precisa vir de dados verificáveis, 
+por exemplo: "Negado por dívida ativa registrada em órgão regulador".
+
+
+E não por inferências do modelo.
+
+---
+
+## 🧩 Integração com Feature Store
+
+O RAG deve recuperar informações como:
+
+- histórico de inadimplência
+- dívidas registradas
+- indicadores financeiros
+
+Essas informações alimentam o prompt do modelo para gerar **explicações auditáveis**.
+
+---
+
+# 🏁 Resultado Esperado
+
+Uma arquitetura que combine:
+
+✅ **Machine Learning clássico**  
+✅ **GenAI contextual**  
+✅ **Segurança e privacidade**  
+✅ **Governança de IA**  
+✅ **Controle de custos (FinOps)**  
+✅ **Escalabilidade na GCP**
+
+---
+
+# 🚀 Objetivo Final
+
+Construir um sistema de decisão de crédito que seja:
+
+- **Inteligente**
+- **Explicável**
+- **Seguro**
+- **Escalável**
+- **Economicamente sustentável**
+
