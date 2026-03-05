@@ -1,0 +1,290 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="WXB_BBZWv74r_Z0aOCQp">
+    <mxGraphModel dx="1213" dy="-405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-94" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="830" width="570" x="410" y="3190" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-90" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="1220" width="1199" x="91" y="1908" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-93" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="800" width="423" x="827" y="2140" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-92" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="800" width="360" x="440" y="2140" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-91" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="140" width="320" x="97" y="2140" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-89" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="385" width="433" x="97" y="1515" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-88" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="470" width="455" x="555" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-87" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="200" width="430" x="100" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="7uIm9pzK7ymgNPtDu2-A-292" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;FinOps &amp;amp; Engenharia de Custos&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="225" x="365" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="7uIm9pzK7ymgNPtDu2-A-294" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;1. Duas arquiteturas possíveis&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;1 - Processar tudo diretamente com LLM (Gemini 1.5 Pro)&lt;/div&gt;&lt;div&gt;2 - Arquitetura híbrida&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;XGBoost → triagem inicial (barato)&lt;/li&gt;&lt;li&gt;Gemini Flash → análise rápida de texto&lt;/li&gt;&lt;li&gt;Gemini Pro → apenas casos complexos&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="360" x="120" y="1392" as="geometry" />
+        </mxCell>
+        <mxCell id="lrNWYUPwL3SB6cBhF5Oy-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;2. Premissas do Cálculo&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Volume diário: 10.000 solicitações/dia ≈ 300.000 solicitações/mês&lt;/li&gt;&lt;li&gt;Cada análise leva em consideração os seguintes tipos de requisição:&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- histórico financeiro&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- resumo de emails&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- contratos PDF&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;- notícias&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="510" x="555" y="1382" as="geometry" />
+        </mxCell>
+        <mxCell id="lrNWYUPwL3SB6cBhF5Oy-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;4 - Arquitetura Híbrida&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="260" x="612" y="1940" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-14" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;" value="Estimativa de tokens por requisição" vertex="1">
+          <mxGeometry height="153" width="380" x="590" y="1491" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-15" parent="3QiwOCORIn0j5tFV69Tr-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-16" parent="3QiwOCORIn0j5tFV69Tr-15" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;dados estruturados resumidos&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-17" parent="3QiwOCORIn0j5tFV69Tr-15" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;1.000&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-18" parent="3QiwOCORIn0j5tFV69Tr-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-19" parent="3QiwOCORIn0j5tFV69Tr-18" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;emails&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-20" parent="3QiwOCORIn0j5tFV69Tr-18" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;2.000&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-21" parent="3QiwOCORIn0j5tFV69Tr-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-22" parent="3QiwOCORIn0j5tFV69Tr-21" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="contrato PDF" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-23" parent="3QiwOCORIn0j5tFV69Tr-21" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;u&gt;4.000&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-24" parent="3QiwOCORIn0j5tFV69Tr-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-25" parent="3QiwOCORIn0j5tFV69Tr-24" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="notícias" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-26" parent="3QiwOCORIn0j5tFV69Tr-24" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;u&gt;1.000&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-27" parent="1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="prompt + instruções" vertex="1">
+          <mxGeometry height="30" width="210" x="589.5" y="1648" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-28" parent="1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;u&gt;2.000&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="797.5" y="1647" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-29" parent="1" style="line;strokeWidth=1;rotatable=0;dashed=0;labelPosition=right;align=left;verticalAlign=middle;spacingTop=0;spacingLeft=6;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="10" width="380" x="589.5" y="1672" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-30" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="589.5" y="1677" as="sourcePoint" />
+            <mxPoint x="589.5" y="1637" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-31" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="968.45" y="1677" as="sourcePoint" />
+            <mxPoint x="968.45" y="1637" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-32" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="799.5" y="1681" as="sourcePoint" />
+            <mxPoint x="799.5" y="1641" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Total aproximado =&amp;nbsp;10.000 tokens por requisição&lt;br&gt;&lt;br&gt;Resposta do modelo: =&amp;nbsp;1.000 tokens output" vertex="1">
+          <mxGeometry height="30" width="300" x="572" y="1702" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;3.&amp;nbsp;Custo usando apenas Gemini 1.5 Pro&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Referência aproximada de preço:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;strong data-start=&quot;1063&quot; data-end=&quot;1073&quot;&gt;Input:&lt;/strong&gt; $3.50 / 1M tokens&lt;/li&gt;&lt;li&gt;&lt;strong data-start=&quot;1097&quot; data-end=&quot;1108&quot;&gt;Output:&lt;/strong&gt; $10.50 / 1M tokens&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;Custo por requisição&lt;br&gt;&lt;ul&gt;&lt;li&gt;Input:&amp;nbsp;10.000 tokens (0.01M tokens)&lt;/li&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;0.01 × 3.50&amp;nbsp; = &lt;/span&gt;&lt;span data-start=&quot;1214&quot; data-end=&quot;1225&quot; style=&quot;background-color: transparent;&quot;&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;$0.035&lt;/b&gt;&lt;br&gt;&lt;p data-start=&quot;1227&quot; data-end=&quot;1234&quot; style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Output:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1.000 tokens (&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;0.001M tokens)&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 0.001 × 10.50&amp;nbsp;= &lt;strong data-start=&quot;1279&quot; data-end=&quot;1291&quot;&gt;$0.0105&lt;br&gt;&lt;br&gt;&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;&lt;p data-start=&quot;1293&quot; data-end=&quot;1314&quot; style=&quot;&quot;&gt;&lt;/p&gt;&lt;ul style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;li&gt;Total por requisição: $&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;0.035 + $0.0105 ≈ &lt;/span&gt;&lt;strong data-start=&quot;1336&quot; data-end=&quot;1347&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;$0.045&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;strong data-start=&quot;1336&quot; data-end=&quot;1347&quot; style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&lt;strong data-start=&quot;1336&quot; data-end=&quot;1347&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Custo Diário:&lt;/font&gt;&lt;/strong&gt;&lt;strong data-start=&quot;1336&quot; data-end=&quot;1347&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;10.000 &lt;/font&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;requisições&lt;/font&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt; &lt;/font&gt;× $0.045 =&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;strong data-start=&quot;1404&quot; data-end=&quot;1417&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;$450/dia&lt;/strong&gt;&lt;/font&gt;&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;&lt;h3 data-start=&quot;1424&quot; data-end=&quot;1440&quot;&gt;&lt;strong data-start=&quot;1336&quot; data-end=&quot;1347&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px;&quot;&gt;&lt;strong data-start=&quot;1336&quot; data-end=&quot;1347&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Custo Mensal:&amp;nbsp;&lt;/font&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;$450 × 30 =&amp;nbsp;&lt;/span&gt;&lt;strong data-start=&quot;1456&quot; data-end=&quot;1474&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;$13.500 / mês&lt;/strong&gt;&lt;/font&gt;&lt;/h3&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="386" x="117" y="1693" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Requisição" vertex="1">
+          <mxGeometry height="30" width="60" x="186" y="2038" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-41" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.sagemaker_model;" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Análise Score&lt;br&gt;&lt;i&gt;(XGBoost)&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="48" x="328" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-42" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="120" width="20" x="398" y="2000" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="70% casos claros → decisão automática" vertex="1">
+          <mxGeometry height="30" width="240" x="428" y="2020" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-44" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="30% casos cinzentos&amp;nbsp;&amp;nbsp;→" vertex="1">
+          <mxGeometry height="30" width="170" x="428" y="2071" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;→&amp;nbsp;&lt;/span&gt;10% ainda ambíguos&amp;nbsp;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;→&amp;nbsp;&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="246" x="620" y="2070" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-47" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.sagemaker_model;" value="&lt;font color=&quot;#ffffff&quot; style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;Gemini Flash&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="48" x="580" y="2061" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-48" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.sagemaker_model;" value="&lt;font color=&quot;#ffffff&quot; style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;Gemini Pro&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="48" x="824" y="2061" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-50" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="256" y="2054.5" as="sourcePoint" />
+            <mxPoint x="326" y="2054.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Custo do XGBoost&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul style=&quot;&quot;&gt;&lt;li style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;XGBoost rodando em &lt;/span&gt;&lt;span data-start=&quot;2025&quot; data-end=&quot;2050&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;Vertex AI / Cloud Run&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;.&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Custo estimado por inferência&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;≈ &lt;/span&gt;&lt;span data-start=&quot;2087&quot; data-end=&quot;2099&quot; style=&quot;font-weight: bold; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;$0.0001&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;strong data-start=&quot;2087&quot; data-end=&quot;2099&quot; style=&quot;font-weight: bold; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Para 300.000 inferências/mês:&amp;nbsp;&lt;/span&gt;&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;300k × 0.0001&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= &lt;/span&gt;&lt;strong data-start=&quot;2149&quot; data-end=&quot;2161&quot; style=&quot;font-weight: bold; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;$30/mês&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="399.5" x="40.5" y="2200" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Custo Gemini Pro (casos complexos)&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Volume de requisições&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Total de pedidos: 10.000 pedidos/dia&lt;/li&gt;&lt;li&gt;Casos cinzentos: 30% = 10.000 × 0.30 = 3.000&lt;/li&gt;&lt;li&gt;Casos complexos dentro dos cinzentos: 10% = 3.000 × 0.10 = 300&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Requisições/dia para Gemini Pro: 300&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Requisições/mês (30 dias): 9000&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Input: 10.000 (0.01M) tokens&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Output: 1000 (0.001M) tokens&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Preço do Gemini 1.5 Pro (estimado)&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: $3.50 / 1M tokens&lt;/li&gt;&lt;li&gt;Output: $10.50 / 1M tokens&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo por requisição&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 0.01 × 3.50 = $0.035&lt;/li&gt;&lt;li&gt;Output: 0.001 × 10.50 = $0.0105&lt;/li&gt;&lt;li&gt;Custo total por requisição = 0.035 + 0.0105 = $0.0455&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Consumo de tokens diário&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input tokens: 300 × 10.000 = 3.000.000 tokens&lt;/li&gt;&lt;li&gt;Output tokens: 300 × 1.000 = 300.000 tokens&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo Diário&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 3M × 3.50/1M = 3 × 3.50 = $10.50&lt;/li&gt;&lt;li&gt;Output: 0.3M × 10.50/1M = 0.3 × 10.50 = $3.15&lt;/li&gt;&lt;li&gt;Custo diário total: 10.50 + 3.15 = $13.65&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Consumo de tokens mensal&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 3M × 30 = 90M tokens&lt;/li&gt;&lt;li&gt;Output: 0.3M × 30 = 9M tokens&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo Mensal&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 90M × 3.50/1M = 90 × 3.50 = $315.00&lt;/li&gt;&lt;li&gt;Output: 9M × 10.50/1M = 9 × 10.50 = $94.50&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo Mensal Total: 315 + 94.5 = $409.5&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="399.5" x="841" y="2500" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Custo Gemini Flash (casos cinzentos)&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Volume de requisições&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Total de pedidos: 10.000 pedidos/dia&lt;/li&gt;&lt;li&gt;Casos cinzentos: 30% = 10.000 × 0.30 = 3.000&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Requisições/dia para Gemini Flash: 3.000&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Requisições/mês (30 dias): 90.000&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Input: 10.000 (0.01M) tokens&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Output: 1000 (0.001M) tokens&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Preço do Gemini Flash&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: $0.35 / 1M tokens&lt;/li&gt;&lt;li&gt;Output: $0.70 / 1M tokens&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo por requisição&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 0.01 × 0.35 = $0.0035&lt;/li&gt;&lt;li&gt;Output: 0.001 × 0.70 = $0.0007&lt;/li&gt;&lt;li&gt;Custo total por requisição = 0.0035 + 0.0007 = $0.0042&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Consumo de tokens diário&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input tokens: 3.000 × 10.000 = 30.000.000 tokens&lt;/li&gt;&lt;li&gt;Output tokens: 3.000 × 1.000 = 3.000.000 tokens&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo Diário&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 30M × 0.35/1M = 30 × 0.35 = $10.50&lt;/li&gt;&lt;li&gt;Output: 3M × 0.70/1M = 3 × 0.70 = $2.10&lt;/li&gt;&lt;li&gt;Custo diário total: 10.50 + 2.10 = $13.65&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Consumo de tokens mensal&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 30M × 30 = 900M tokens&lt;/li&gt;&lt;li&gt;Output: 3M × 30 = 90M tokens&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo Mensal&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;Input: 900M × 0.35/1M = 900 × 0.35 = $315.00&lt;/li&gt;&lt;li&gt;Output: 90M × 0.70/1M = 90 × 0.70 = $63.00&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Custo Mensal Total: 315.00 + 63.00 = $378.00&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="399.5" x="424.5" y="2490" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-58" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;" value="&lt;div&gt;&lt;div&gt;Conclusão Final FinOps&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="153" width="482.5" x="453.25" y="3256" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-59" parent="3QiwOCORIn0j5tFV69Tr-58" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="482.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-60" parent="3QiwOCORIn0j5tFV69Tr-59" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;LLM puro (Gemini Pro)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-61" parent="3QiwOCORIn0j5tFV69Tr-59" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;$13,500.00&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="272.5" x="210" as="geometry">
+            <mxRectangle height="30" width="272.5" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-62" parent="3QiwOCORIn0j5tFV69Tr-58" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="482.5" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-63" parent="3QiwOCORIn0j5tFV69Tr-62" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Arquitetura Híbrida&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-64" parent="3QiwOCORIn0j5tFV69Tr-62" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;$817.50&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="272.5" x="210" as="geometry">
+            <mxRectangle height="30" width="272.5" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-65" parent="3QiwOCORIn0j5tFV69Tr-58" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="482.5" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-66" parent="3QiwOCORIn0j5tFV69Tr-65" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-67" parent="3QiwOCORIn0j5tFV69Tr-65" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="30" width="272.5" x="210" as="geometry">
+            <mxRectangle height="30" width="272.5" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-68" parent="3QiwOCORIn0j5tFV69Tr-58" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="482.5" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-69" parent="3QiwOCORIn0j5tFV69Tr-68" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="Redução" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-70" parent="3QiwOCORIn0j5tFV69Tr-68" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;u&gt;&lt;b&gt;(13.500 - 817,50)/13.500 = 94%&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="272.5" x="210" as="geometry">
+            <mxRectangle height="30" width="272.5" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-73" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;" value="&lt;div&gt;&lt;div&gt;Custo Total Arquitetura Híbrida&lt;br&gt;(Mensal)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="153" width="380" x="598" y="2960" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-74" parent="3QiwOCORIn0j5tFV69Tr-73" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-75" parent="3QiwOCORIn0j5tFV69Tr-74" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;XGBoost&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-76" parent="3QiwOCORIn0j5tFV69Tr-74" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;$30.00&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-77" parent="3QiwOCORIn0j5tFV69Tr-73" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-78" parent="3QiwOCORIn0j5tFV69Tr-77" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Gemini Flash&lt;br&gt;Gemini Pro&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-79" parent="3QiwOCORIn0j5tFV69Tr-77" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;$378.00&lt;br&gt;$409.50&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-80" parent="3QiwOCORIn0j5tFV69Tr-73" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-81" parent="3QiwOCORIn0j5tFV69Tr-80" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-82" parent="3QiwOCORIn0j5tFV69Tr-80" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-83" parent="3QiwOCORIn0j5tFV69Tr-73" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="380" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-84" parent="3QiwOCORIn0j5tFV69Tr-83" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;b&gt;Total&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="210" as="geometry">
+            <mxRectangle height="30" width="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-85" parent="3QiwOCORIn0j5tFV69Tr-83" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="&lt;u&gt;&lt;b&gt;817.50&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="210" as="geometry">
+            <mxRectangle height="30" width="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-86" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;A abordagem híbrida é superior porque:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1 - LLMs são caros para classificação simples&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Grande parte das decisões de crédito são triviais (baixo ou alto risco).&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Modelos tradicionais resolvem isso com precisão.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2 -&amp;nbsp; LLM&amp;nbsp; trabalham bem com tarefas semânticas complexas.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3 - Redução drástica de tokens&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;70% das requisições não usam LLM. Isso é o maior fator de economia.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4 - Arquitetura escalável&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Separação de camadas:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Estrutura de Risco → XGBoost&lt;/li&gt;&lt;li&gt;Inferencia textual → Gemini&lt;/li&gt;&lt;li&gt;Casos semântica complexa&amp;nbsp; → Gemini Pro&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;A arquitetura híbrida reduz o custo mensal em 94% de economia.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Isso é possível porque modelos tradicionais (XGBoost) realizam a triagem inicial de baixo custo, enquanto LLMs (Gemini Flash/Pro) são reservados apenas para casos ambíguos que exigem interpretação semântica de documentos e comunicações.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Esse design mantém qualidade da decisão, explicabilidade e controle de risco, enquanto otimiza o uso de recursos de IA generativa dentro das práticas de FinOps em ambientes GCP.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="416" x="460" y="3690" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

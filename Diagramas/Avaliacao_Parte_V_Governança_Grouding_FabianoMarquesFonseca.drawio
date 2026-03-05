@@ -1,0 +1,144 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="WXB_BBZWv74r_Z0aOCQp">
+    <mxGraphModel dx="4852" dy="1887" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-145" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="122" width="213" x="472" y="2538" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-143" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="152" width="399.5" x="720.5" y="2398" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-142" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="235" width="350" x="70" y="2303" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-128" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="170" width="140" x="480" y="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="7uIm9pzK7ymgNPtDu2-A-292" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Governança &amp;amp; Grouding&lt;br&gt;(Prevenção da Alucinação)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="225" x="490" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="7uIm9pzK7ymgNPtDu2-A-294" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Para prevenir alucinações na justificativa da decisão de crédito a arquitetura RAG (Retrieval-Augmented Generation) conectada à Feature Store corporativa gerando contexto ao negócio da companhia.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Desta forma, informações são recuperadas (R do RAG) nos contratos armazenados na estrutura Vetorial e adicionado/aumentado (A - do RAG) ao prompt enriquecido com o retorno do Modelo de Risco, assim,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;com a informação recuperada e aumentada, invocamos o LLM para gerar (G do RAG) o retorno de acordo com o prompt fornecido e desta forma ter uma combinação de agentes.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Essa abordagem implementa grounding, ou seja, ancora a geração do modelo em dados reais da organização, garantindo que justificativas sejam baseadas em fatos verificáveis e auditáveis.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Combinado com outputs estruturados,&amp;nbsp; guardrails e logging de prompts, o sistema garante explicabilidade, rastreabilidade e conformidade regulatória, evitando que o modelo produza justificativas inventadas.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Benefícios da abordagem&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Evita alucinação - Modelo não inventa motivos.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Explicabilidade - Compatível com regulações financeiras.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Reprodutibilidade - A decisão pode ser recriada posteriormente.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Consistência - Todas justificativas vêm da mesma Feature Store governada.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Benefícios da Arquitetura&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Problema de Alucinação é&amp;nbsp;&lt;/span&gt;mitigado usando com&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;RAG + Grounding&lt;/span&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Inconsistência dados&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;para o modelo, resolve com&amp;nbsp;Feature Store&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Explicabilidade, conseguimos com esta solução evidência rastreável&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Governança, é garantida pelo logs completos&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Escala é alcançada com a&amp;nbsp;arquitetura serverless&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="1072.5" x="97" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-50" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-97" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="1960" />
+            </Array>
+            <mxPoint x="700" y="1960" as="sourcePoint" />
+            <mxPoint x="960" y="2090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-97" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fonte de Dados&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;BigQuery&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Contratos (PDF)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Emails&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Notícias mercado&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="182" x="447" y="1930" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-109" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3QiwOCORIn0j5tFV69Tr-99" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-98" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Feature Engineering" vertex="1">
+          <mxGeometry height="30" width="60" x="140" y="2135" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-110" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3QiwOCORIn0j5tFV69Tr-100" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-99" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Vertex AI Feature Store" vertex="1">
+          <mxGeometry height="30" width="60" x="140" y="2237" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-111" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3QiwOCORIn0j5tFV69Tr-104" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-100" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Modelo de Risco (XGBoost)&lt;br&gt;Cloud Run" vertex="1">
+          <mxGeometry height="10" width="104" x="240" y="2247" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-104" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Score do Risco" vertex="1">
+          <mxGeometry height="30" width="60" x="407" y="2236" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-115" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3QiwOCORIn0j5tFV69Tr-107" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-106" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Dados Texto" vertex="1">
+          <mxGeometry height="30" width="60" x="935.75" y="2110" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-112" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3QiwOCORIn0j5tFV69Tr-108" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-107" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Vector Embeddings" vertex="1">
+          <mxGeometry height="30" width="60" x="935.75" y="2230" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-114" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3QiwOCORIn0j5tFV69Tr-113" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-108" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Vertex AI Vector Search" vertex="1">
+          <mxGeometry height="30" width="60" x="800" y="2230" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-113" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="RAG Recuperação Similaridade" vertex="1">
+          <mxGeometry height="30" width="60" x="680" y="2230" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-116" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-97" style="endArrow=classic;html=1;rounded=0;exitX=0.149;exitY=1.16;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="1960" />
+            </Array>
+            <mxPoint x="440" y="1960" as="sourcePoint" />
+            <mxPoint x="170" y="2120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-131" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3QiwOCORIn0j5tFV69Tr-129" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-117" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Gemini&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(Grounded Prompt)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="510" y="2330" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-126" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="559" y="2248" />
+            </Array>
+            <mxPoint x="469" y="2248" as="sourcePoint" />
+            <mxPoint x="559" y="2310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-127" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="2247" />
+            </Array>
+            <mxPoint x="670" y="2247" as="sourcePoint" />
+            <mxPoint x="570" y="2310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-133" edge="1" parent="1" source="3QiwOCORIn0j5tFV69Tr-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575.5" y="2525" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-129" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Decisão + Reasoning &lt;br&gt;(Tabela de Decisão Lógica)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="161" x="495" y="2430" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-130" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Logs para auditoria no BigQuery&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;análise&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;auditoria regulatória&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;explainability&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;investigação posterior&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="282" x="438.5" y="2584" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-134" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;i&gt;Você é um sistema de análise de crédito.&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Utilize apenas as evidências fornecidas.&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Se não houver evidência suficiente,&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;responda &quot;dados insuficientes&quot;.&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Evidências:&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Feature Store:&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;{info_01}: {valor_info_01}&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;{info_02}: {valor_info_02}&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Documentos:&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;{texto recuperado do Banco Vetorial e convertido em texto}&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="560" x="90" y="2398" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-135" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="800" y="2344" as="sourcePoint" />
+            <mxPoint x="650" y="2344" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-139" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Resposta Gerada Gemini:&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Decisão: NEGADO&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Motivo:&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;A empresa possui registro de dívida ativa e histórico recente de &lt;br&gt;inadimplência superior a 90 dias.&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="560" x="755" y="2460" as="geometry" />
+        </mxCell>
+        <mxCell id="3QiwOCORIn0j5tFV69Tr-140" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="430" y="2344" as="sourcePoint" />
+            <mxPoint x="520.25" y="2344.44" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
